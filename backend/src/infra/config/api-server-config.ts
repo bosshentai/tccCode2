@@ -1,6 +1,7 @@
 // import {from, get, logger} from 'env-var';
 // const env = from(process.env,{},logger)
-import 'dotenv';
+import dotenv from 'dotenv';
+dotenv.config()
 
 export class ApiServerConfig {
 
