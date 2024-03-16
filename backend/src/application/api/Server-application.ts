@@ -1,13 +1,19 @@
+import express from "express";
 import { ApiServerConfig } from "../../infra/config/api-server-config";
 
 export class ServerApplication {
 
-  // private readonly host: string = ApiServerConfig.HOST;
-  // private readonly port: number = ApiServerConfig.PORT;
+  private readonly host: string = ApiServerConfig.HOST;
+  private readonly port: number = ApiServerConfig.PORT;
 
   public async run(): Promise<void>{
+    const app = express()
     // console.log(`Api server running on http://${this.host}:${this.port}`);
-    console.log("Test")
+    // console.log("Test")
+
+    await app.listen(this.port, ()=>{
+      console.log(`Api server running on http://${this.host}:${this.port}`);
+    });
   }
 
 

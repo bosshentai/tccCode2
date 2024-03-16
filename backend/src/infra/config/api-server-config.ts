@@ -9,6 +9,6 @@ export class ApiServerConfig {
   // public static readonly PORT : number = env.get("API_SERVER_PORT").required().asPortNumber();
   // public static readonly HOST : string = env.get("API_SERVER_HOST").required().asString();
 
-  public static readonly HOST : string = process.env.API_SERVER_HOST || '';
+  public static readonly HOST : string = process.env.API_SERVER_HOST ? process.env.API_SERVER_HOST : "localhost";
   public static readonly PORT : number = process.env.API_SERVER_PORT ? Number(process.env.API_SERVER_PORT) : 3000;
 }
