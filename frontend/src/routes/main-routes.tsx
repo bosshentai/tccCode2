@@ -1,3 +1,8 @@
 import { lazy } from 'react';
 
-export const MainRoutes = {};
+export const MainRoutes = {
+  path: '/',
+  element: (
+    
+  )
+};

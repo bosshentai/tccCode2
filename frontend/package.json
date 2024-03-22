@@ -16,8 +16,10 @@
     "@reduxjs/toolkit": "^2.2.1",
     "axios": "^1.6.8",
     "axios-mock-adapter": "^1.22.0",
+    "chance": "^1.1.11",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "jwt-decode": "^4.0.0",
     "localforage": "^1.10.0",
     "lucide-react": "^0.359.0",
     "match-sorter": "^6.3.4",
@@ -32,6 +34,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/chance": "^1.1.6",
     "@types/node": "^20.11.30",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
