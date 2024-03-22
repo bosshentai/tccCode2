@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    entrypoint: .docker/entrypoint.sh
+    container_name: nogain_frontend
+    ports:
+      - '5001:5001'
+    volumes:
+      - .:/app
+    networks:
+      - nogain_network
+
+networks:
+  nogain_network:
+    driver: bridge
