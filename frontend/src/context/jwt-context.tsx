@@ -42,7 +42,7 @@ const setSession = (serviceToken: string | null) => {
   }
 };
 
-const JWTContext = createContext<JWTContextType | null>(null);
+export const JWTContext = createContext<JWTContextType | null>(null);
 
 export const JWTProvider = ({ children }: { children: ReactElement }) => {
   // const [state, setState] = React.useState<InitialLoginContextProps>(initialState);
