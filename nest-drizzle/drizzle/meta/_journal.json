@@ -1,0 +1,41 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1712006022926,
+      "tag": "0000_square_ulik",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1712006069888,
+      "tag": "0001_chunky_tigra",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1712007169446,
+      "tag": "0002_spooky_prowler",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1712007419242,
+      "tag": "0003_overrated_jack_flag",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1712008994031,
+      "tag": "0004_hesitant_mentor",
+      "breakpoints": true
+    }
+  ]
+}

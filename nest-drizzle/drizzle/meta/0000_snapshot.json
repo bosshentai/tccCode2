@@ -1,0 +1,67 @@
+{
+  "id": "4d9bc38b-ef6d-4520-ad9e-9fa52b66ca47",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "5",
+  "dialect": "pg",
+  "tables": {
+    "users": {
+      "name": "users",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "password": {
+          "name": "password",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "birth_date": {
+          "name": "birth_date",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cni": {
+          "name": "cni",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nif": {
+          "name": "nif",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

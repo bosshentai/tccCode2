@@ -1,0 +1,138 @@
+{
+  "id": "1f425dc7-d9c1-458e-a052-e0e409e583af",
+  "prevId": "8c1cdd83-c60b-4bf8-aa13-78c2ec1fcdcf",
+  "version": "5",
+  "dialect": "pg",
+  "tables": {
+    "clients": {
+      "name": "clients",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "refresh_tokens": {
+      "name": "refresh_tokens",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "expires_in": {
+          "name": "expires_in",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "users": {
+      "name": "users",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "password": {
+          "name": "password",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "birth_date": {
+          "name": "birth_date",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cni": {
+          "name": "cni",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nif": {
+          "name": "nif",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {
+    "roles": {
+      "name": "roles",
+      "values": {
+        "MANAGER": "MANAGER",
+        "EMPLOYEE": "EMPLOYEE",
+        "CLIENT": "CLIENT",
+        "PERSONALTRAINER": "PERSONALTRAINER",
+        "UNKNOWN": "UNKNOWN"
+      }
+    },
+    "status": {
+      "name": "status",
+      "values": {
+        "ACTIVE": "ACTIVE",
+        "INACTIVE": "INACTIVE",
+        "BLOCKED": "BLOCKED"
+      }
+    }
+  },
+  "schemas": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
