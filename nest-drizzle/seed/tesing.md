@@ -1,0 +1,1 @@
+https://anasrin.vercel.app/blog/seeding-database-with-drizzle-orm/#seed

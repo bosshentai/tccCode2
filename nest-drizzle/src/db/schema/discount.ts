@@ -2,11 +2,11 @@ import {
   doublePrecision,
   pgTable,
   text,
-  uuid,
   timestamp,
+  uuid,
 } from 'drizzle-orm/pg-core';
 
-export const trainingPlan = pgTable('training_plans', {
+export const discount = pgTable('discounts', {
   id: uuid('id').defaultRandom().primaryKey().notNull(),
   name: text('text').notNull(),
   description: text('text').notNull(),

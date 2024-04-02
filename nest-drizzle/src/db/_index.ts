@@ -4,3 +4,6 @@ export { status } from './schema/status';
 export { refreshToken } from './schema/refresh-token';
 export { client } from './schema/client';
 export { trainingPlan } from './schema/training-plan';
+export { discount } from './schema/discount';
+export { personalTrainer } from './schema/personal-trainer';
+export { manager } from './schema/manager';
