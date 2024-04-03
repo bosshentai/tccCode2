@@ -7,3 +7,6 @@ export { trainingPlan } from './schema/training-plan';
 export { discount } from './schema/discount';
 export { personalTrainer } from './schema/personal-trainer';
 export { manager } from './schema/manager';
+export { clientPersonalTrainer } from './schema/client-personal-trainer';
+export { clientDiscount } from './schema/client-discount';
+export { clientTrainingPlan } from './schema/client-training-plan';
