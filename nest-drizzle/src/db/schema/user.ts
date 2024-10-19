@@ -1,4 +1,3 @@
-// import { sql } from 'drizzle-orm';
 import { uuid, pgTable, varchar, timestamp } from 'drizzle-orm/pg-core';
 
 export const user = pgTable('users', {

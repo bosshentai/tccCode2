@@ -10,3 +10,5 @@ export { manager } from './schema/manager';
 export { clientPersonalTrainer } from './schema/client-personal-trainer';
 export { clientDiscount } from './schema/client-discount';
 export { clientTrainingPlan } from './schema/client-training-plan';
+export { payment } from './schema/payment';
+export { userRefreshTokenRelations } from './schema/user-refresh-token-relations';
