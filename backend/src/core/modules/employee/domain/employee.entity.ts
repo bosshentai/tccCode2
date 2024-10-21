@@ -31,6 +31,36 @@ export class Employee extends BaseEntity {
     this._birth = props.birth;
     this._cni = props.cni;
     this._nif = props.nif;
+
+    this.validate();
+  }
+
+  private validate(): boolean {
+    if (this._name.trim().length === 0) {
+      throw new Error('Name is required');
+    }
+
+    if (this._email.trim().length === 0) {
+      throw new Error('Email is required');
+    }
+
+    if (this._phone.trim().length === 0) {
+      throw new Error('Phone is required');
+    }
+
+    if (this._cni.trim().length === 0) {
+      throw new Error('CNI is required');
+    }
+
+    if (this._nif.trim().length === 0) {
+      throw new Error('NIF is required');
+    }
+
+    if (!this._birth || isNaN(this.birth.getTime())) {
+      throw new Error('Birth is required');
+    }
+
+    return true;
   }
 
   get name(): string {
@@ -47,5 +77,12 @@ export class Employee extends BaseEntity {
 
   get birth(): Date {
     return this._birth;
+  }
+
+  get cni(): string {
+    return this._cni;
+  }
+  get nif(): string {
+    return this._nif;
   }
 }
