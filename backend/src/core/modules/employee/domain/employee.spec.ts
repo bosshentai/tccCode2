@@ -9,7 +9,7 @@ describe('Employee unit test', () => {
         phone: '1234567',
         birth: new Date(),
         cni: '19931022M012F',
-        nif: 'nif',
+        nif: '123345678',
       });
     }).toThrow('Name is required');
   });
@@ -130,4 +130,19 @@ describe('Employee unit test', () => {
       });
     }).toThrow('NIF is required');
   });
+
+  it("should throw error when isn't valid", () => {
+    expect(() => {
+      let employee = new Employee({
+        name: 'name',
+        email: 'example@example.com',
+        phone: '1234567',
+        birth: new Date(),
+        cni: '19931022M012F',
+        nif: '123345678F',
+      });
+    }).toThrow('NIF is invalid');
+  });
+
+  // have 2 or more errors
 });
