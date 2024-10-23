@@ -1,5 +1,7 @@
 import BaseEntity from '../../_shared/domain/entity/base.entity';
 import Id from '../../_shared/domain/value-object/id.value-object';
+import { NotificationError } from '../../_shared/notification/notification.error';
+import EmployeeValidatorFactory from '../factory/employee.validator.factory';
 
 type EmployeeProps = {
   id?: Id;
@@ -33,34 +35,39 @@ export class Employee extends BaseEntity {
     this._nif = props.nif;
 
     this.validate();
+
+    if (this.notification.hasErrors()) {
+      throw new NotificationError(this.notification.getErrors());
+    }
   }
 
-  private validate(): boolean {
-    if (this._name.trim().length === 0) {
-      throw new Error('Name is required');
-    }
+  private validate() {
+    EmployeeValidatorFactory.create().validate(this);
+    // if (this._name.trim().length === 0) {
+    //   throw new Error('Name is required');
+    // }
 
-    if (this._email.trim().length === 0) {
-      throw new Error('Email is required');
-    }
+    // if (this._email.trim().length === 0) {
+    //   throw new Error('Email is required');
+    // }
 
-    if (this._phone.trim().length === 0) {
-      throw new Error('Phone is required');
-    }
+    // if (this._phone.trim().length === 0) {
+    //   throw new Error('Phone is required');
+    // }
 
-    if (this._cni.trim().length === 0) {
-      throw new Error('CNI is required');
-    }
+    // if (this._cni.trim().length === 0) {
+    //   throw new Error('CNI is required');
+    // }
 
-    if (this._nif.trim().length === 0) {
-      throw new Error('NIF is required');
-    }
+    // if (this._nif.trim().length === 0) {
+    //   throw new Error('NIF is required');
+    // }
 
-    if (!this._birth || isNaN(this.birth.getTime())) {
-      throw new Error('Birth is required');
-    }
+    // if (!this._birth || isNaN(this.birth.getTime())) {
+    //   throw new Error('Birth is required');
+    // }
 
-    return true;
+    // return true;
   }
 
   get name(): string {
